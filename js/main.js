@@ -355,8 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (form) {
     const formStatus = document.getElementById('formStatus');
 
-    // TODO: Replace this URL with your actual form endpoint (Formspree, Netlify Forms, custom API, etc.)
-    const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+    // Contact form endpoint - using Web3Forms (sends directly to email)
+    const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
 
   function validateField(field) {
     const errorEl = field.parentElement.querySelector('.form-error');
