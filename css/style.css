@@ -246,11 +246,11 @@ section{ position: relative; padding: var(--space-7) 0; }
    CLIENTS MARQUEE
    ============================================ */
 .clients{ background: var(--black); }
-.marquee-wrap{ border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08); padding: var(--space-3) 0; overflow:hidden; }
-.marquee-track{ display:flex; gap: 40px; width:max-content; animation: marquee 35s linear infinite; padding-right: 40px; align-items:center; }
+.marquee-wrap{ border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08); padding: var(--space-3) 0; overflow:hidden; display:flex; align-items:center; }
+.marquee-track{ display:flex; gap: 40px; width:max-content; animation: marquee 35s linear infinite; padding-right: 40px; align-items:center; flex-shrink:0; }
 .marquee-wrap:hover .marquee-track{ animation-play-state: paused; }
 @keyframes marquee{ from{ transform: translate3d(0,0,0); } to{ transform: translate3d(-50%,0,0); } }
-.client-logo-img{ height: 70px; width: auto; border-radius: 12px; object-fit: cover; opacity: .7; transition: opacity .4s ease, transform .4s var(--ease); filter: grayscale(.3); }
+.client-logo-img{ height: 60px; width: 60px; border-radius: 12px; object-fit: cover; opacity: .7; transition: opacity .4s ease, transform .4s var(--ease); filter: grayscale(.3); flex-shrink:0; }
 .client-logo-img:hover{ opacity: 1; transform: scale(1.08); filter: grayscale(0); }
 .client-logo{ font-family: var(--font-display); font-size: 36px; letter-spacing: 2px; color: rgba(255,255,255,.18); white-space:nowrap; transition: color .4s ease; }
 .client-logo:hover{ color: var(--gold); }
