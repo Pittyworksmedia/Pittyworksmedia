@@ -964,3 +964,77 @@ textarea:focus-visible {
 .particle:nth-child(odd) { animation-timing-function: cubic-bezier(.2,.8,.3,1); }
 .particle:nth-child(3n) { opacity: .8; filter: blur(0); }
 .particle:nth-child(5n) { background: rgba(255,255,255,.6); }
+
+/* ============================================
+   FOUNDER STORY
+   ============================================ */
+.founder { background: var(--black); }
+.founder-content { max-width: 800px; }
+.founder-timeline { margin-top: var(--space-4); }
+.founder-milestone {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.founder-milestone:last-child { border-bottom: none; }
+.founder-year {
+  min-width: 100px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  padding-top: 4px;
+}
+.founder-detail h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--white);
+}
+.founder-detail p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #b8b8b8;
+  margin: 0;
+}
+
+/* ============================================
+   FLOATING CLIENT BRAND ICONS
+   ============================================ */
+.clients-float { background: linear-gradient(180deg, #111111, #0d0d0b); padding: var(--space-6) 0; }
+.floating-brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 var(--space-4);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.brand-bubble {
+  background: rgba(244,180,0,.06);
+  border: 1px solid rgba(244,180,0,.2);
+  border-radius: 999px;
+  padding: 14px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  color: var(--white);
+  transition: all .4s var(--ease);
+  animation: bubbleFloat 4s ease-in-out infinite;
+  animation-delay: var(--d, 0s);
+}
+.brand-bubble:nth-child(even) { animation-duration: 5s; }
+.brand-bubble:nth-child(3n) { animation-duration: 4.5s; }
+.brand-bubble:hover {
+  background: rgba(244,180,0,.15);
+  border-color: var(--gold);
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(244,180,0,.2);
+  color: var(--gold);
+}
+@keyframes bubbleFloat {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -6px, 0); }
+}
