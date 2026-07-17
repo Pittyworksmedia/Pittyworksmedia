@@ -189,9 +189,9 @@ section{ position: relative; padding: var(--space-7) 0; }
 /* ============================================
    ABOUT
    ============================================ */
-.about{ background: var(--black); }
-.about-lede{ max-width: 620px; color: #b8b8b8; font-size:17px; line-height:1.7; margin-bottom: var(--space-5); }
-.about-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: var(--space-3); }
+.about{ background: var(--black); padding: var(--space-5) 0; }
+.about-lede{ max-width: 620px; color: #b8b8b8; font-size:17px; line-height:1.7; margin-bottom: var(--space-3); }
+.about-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap: var(--space-3); margin-top: var(--space-3); }
 .about-card{ background: var(--black-2); border:1px solid rgba(255,255,255,.06); border-radius: var(--radius); padding: var(--space-4); transition: transform .4s var(--ease), border-color .4s ease; }
 .about-card:hover{ transform: translateY(-8px); border-color: rgba(244,180,0,.4); }
 .about-num{ display:block; font-family: var(--font-serif); font-style:italic; color: var(--gold); font-size: 22px; margin-bottom: 14px; }
@@ -670,7 +670,7 @@ textarea:focus-visible {
    PAGE HEADER (for sub-pages)
    ============================================ */
 .page-header {
-  padding: 180px 0 var(--space-5);
+  padding: 160px 0 var(--space-4);
   background: var(--black);
 }
 .page-header .section-title {
@@ -983,7 +983,7 @@ textarea:focus-visible {
 /* ============================================
    FOUNDER STORY
    ============================================ */
-.founder { background: var(--black); }
+.founder { background: var(--black); padding: var(--space-5) 0 var(--space-4); }
 .founder-content { max-width: 800px; }
 .founder-timeline { margin-top: var(--space-4); }
 .founder-milestone {
@@ -1017,7 +1017,7 @@ textarea:focus-visible {
 /* ============================================
    FLOATING CLIENT BRAND ICONS
    ============================================ */
-.clients-float { background: linear-gradient(180deg, #111111, #0d0d0b); padding: var(--space-6) 0; }
+.clients-float { background: linear-gradient(180deg, #111111, #0d0d0b); padding: var(--space-5) 0 var(--space-4); }
 .floating-brands {
   display: flex;
   flex-wrap: wrap;
