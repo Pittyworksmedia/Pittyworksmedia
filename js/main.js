@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p><strong>The Results:</strong></p>
         <ul>
           <li>Scaled from 0 to 100K followers purely through organic growth, zero ad spend</li>
-          <li>Generated 30M+ reach within 4 months using high-retention content</li>
+          <li>Generated 110M+ reach within 3 months using high-retention content</li>
           <li>Positioned the brand as a household name across Telugu states</li>
           <li>Built a strong personal brand for the founder, increasing relatability and trust</li>
         </ul>
