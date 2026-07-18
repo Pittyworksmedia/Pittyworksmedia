@@ -394,8 +394,8 @@ document.addEventListener('DOMContentLoaded', () => {
     formStatus.textContent = '';
     formStatus.className = 'form-status';
 
-    // Validate all fields
-    const fields = form.querySelectorAll('input, select, textarea');
+    // Validate all fields (skip hidden)
+    const fields = form.querySelectorAll('input:not([type="hidden"]), select, textarea');
     let allValid = true;
     fields.forEach(field => {
       if (!validateField(field)) allValid = false;
@@ -416,20 +416,23 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+        body: data
       });
 
       if (response.ok) {
-        formStatus.textContent = 'Message sent! We\u2019ll be in touch within 24 hours.';
-        formStatus.classList.add('success');
-        form.reset();
-        // Clear error states
-        fields.forEach(f => {
-          f.classList.remove('has-error');
-          const err = f.parentElement.querySelector('.form-error');
-          if (err) err.textContent = '';
-        });
+        const result = await response.json();
+        if (result.success) {
+          formStatus.textContent = 'Message sent! We\u2019ll be in touch within 24 hours.';
+          formStatus.classList.add('success');
+          form.reset();
+          fields.forEach(f => {
+            f.classList.remove('has-error');
+            const err = f.parentElement.querySelector('.form-error');
+            if (err) err.textContent = '';
+          });
+        } else {
+          throw new Error(result.message || 'Submission failed');
+        }
       } else {
         throw new Error('Server error');
       }
