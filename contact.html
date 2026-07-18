@@ -49,11 +49,10 @@
     <div class="container">
       <p class="cta-sub reveal-up">Ready to start? Fill out the form and we'll be in touch within 24 hours.</p>
 
-      <form class="contact-form reveal-up" id="contactForm" novalidate>
-        <!-- Web3Forms: Get your free access key at https://web3forms.com -->
-        <input type="hidden" name="access_key" value="17e19253-2390-41c0-9cdc-46faad0a7639">
-        <input type="hidden" name="subject" value="New Enquiry from Pittworks Website">
-        <input type="hidden" name="from_name" value="Pittworks Media Website">
+      <form class="contact-form reveal-up" id="contactForm" action="https://formsubmit.co/info@pittworks.com" method="POST">
+        <input type="hidden" name="_subject" value="New Enquiry from Pittworks Website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://www.pittworks.com/contact.html">
         <div class="form-row">
           <div class="form-group">
             <label for="contactName">Full Name <span class="required">*</span></label>

@@ -355,8 +355,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (form) {
     const formStatus = document.getElementById('formStatus');
 
-    // Contact form endpoint - using Web3Forms (sends directly to email)
-    const FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+    // Contact form endpoint - using FormSubmit.co (sends directly to info@pittworks.com)
+    const FORM_ENDPOINT = 'https://formsubmit.co/info@pittworks.com';
 
   function validateField(field) {
     const errorEl = field.parentElement.querySelector('.form-error');
@@ -420,19 +420,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (response.ok) {
-        const result = await response.json();
-        if (result.success) {
-          formStatus.textContent = 'Message sent! We\u2019ll be in touch within 24 hours.';
-          formStatus.classList.add('success');
-          form.reset();
-          fields.forEach(f => {
-            f.classList.remove('has-error');
-            const err = f.parentElement.querySelector('.form-error');
-            if (err) err.textContent = '';
-          });
-        } else {
-          throw new Error(result.message || 'Submission failed');
-        }
+        formStatus.textContent = 'Message sent! We\u2019ll be in touch within 24 hours.';
+        formStatus.classList.add('success');
+        form.reset();
+        fields.forEach(f => {
+          f.classList.remove('has-error');
+          const err = f.parentElement.querySelector('.form-error');
+          if (err) err.textContent = '';
+        });
       } else {
         throw new Error('Server error');
       }
